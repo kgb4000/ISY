@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Link from 'next/link'
+import Hero from '../../components/hero'
 import { getPost, getPostsSlugs } from '../../lib/data'
 
 import { RichText } from '@graphcms/rich-text-react-renderer'

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
 import { getPosts } from '../lib/data'
 import HeroSection from '../components/Hero'
 
@@ -42,26 +41,25 @@ export default function Home({ data }) {
               <PostCard>
                 <Link href={`/post/${post.slug}`}>
                   <a>
-                    <Image 
-                      loader={GraphCMSImageLoader}
+                    <img
+                      // loader={GraphCMSImageLoader}
                       src={post.coverImage.url} 
                       alt={post.title}
-                      width={post.coverImage.width}
-                      height={post.coverImage.height}
-                      layout="responsive"
+                      // width={post.coverImage.width}
+                      // height={post.coverImage.height}
                       />
                     <h2>{post.title}</h2>
                   </a>
                 </Link>
                 <div className="author">
                   <div className='image-container'>
-                    <Image 
+                    <img 
                       className="avatar"
-                      loader={GraphCMSImageLoader}
+                      // loader={GraphCMSImageLoader}
                       src={post.author.avatar.url} 
                       alt={post.title}
-                      width={post.author.avatar.width}
-                      height={post.author.avatar.height}
+                      // width={post.author.avatar.width}
+                      // height={post.author.avatar.height}
                       />
                     </div>
                     <p>{post.author.name}</p>
