@@ -1,16 +1,8 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import Hero from '../../components/hero'
 import { getPost, getPostsSlugs } from '../../lib/data'
 
 import { RichText } from '@graphcms/rich-text-react-renderer'
-
-function GraphCMSImageLoader({ src, width }) {
-  const relativeSrc = (src) => src.split('/').pop();
-
-  return `https://media.graphcms.com/resize=width:${width}/${relativeSrc(src)}`;
-}
-
 
 export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.slug)
@@ -44,18 +36,13 @@ export default function Home({ post }) {
           <img
             src={post.coverImage.url} 
             alt={post.title}
-            // width={post.coverImage.width}
-            // height={post.coverImage.height}
             />
           <h2>{post.title}</h2>
           <div className="author">
             <div className='image-container'>
               <img 
-                // loader={GraphCMSImageLoader}
                 src={post.author.avatar.url} 
                 alt={post.title}
-                // width={post.author.avatar.width}
-                // height={post.author.avatar.height}
                 />
               </div>
             <p>{post.author.name}</p>

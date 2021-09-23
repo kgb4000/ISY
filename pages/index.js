@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import { getPosts } from '../lib/data'
-import HeroSection from '../components/Hero'
-
-function GraphCMSImageLoader({ src, width }) {
-  const relativeSrc = (src) => src.split('/').pop();
-
-  return `https://media.graphcms.com/resize=width:${width}/${relativeSrc(src)}`;
-}
 
 export const getStaticProps = async () => {
 
@@ -28,12 +21,6 @@ export default function Home({ data }) {
   console.log(data)
   return (
     <>
-    	{/* <HeroSection 
-				heroText="I See You"
-				backgroundImage="/dudes-on-bikes.jpeg"
-        subText="Ride For Everyone"
-				backgroundHeight="70vh"
-			/> */}
       <Main>
         <div className="container">
             {data.posts.map((post) => (
@@ -42,11 +29,9 @@ export default function Home({ data }) {
                 <Link href={`/post/${post.slug}`}>
                   <a>
                     <img
-                      // loader={GraphCMSImageLoader}
                       src={post.coverImage.url} 
                       alt={post.title}
-                      // width={post.coverImage.width}
-                      // height={post.coverImage.height}
+                      
                       />
                     <h2>{post.title}</h2>
                   </a>
@@ -55,11 +40,8 @@ export default function Home({ data }) {
                   <div className='image-container'>
                     <img 
                       className="avatar"
-                      // loader={GraphCMSImageLoader}
                       src={post.author.avatar.url} 
                       alt={post.title}
-                      // width={post.author.avatar.width}
-                      // height={post.author.avatar.height}
                       />
                     </div>
                     <p>{post.author.name}</p>
@@ -75,7 +57,6 @@ export default function Home({ data }) {
                 </Link>
               </PostCard>
               <div className="sidebar">
-                
               </div>
             </div>
             ))}
