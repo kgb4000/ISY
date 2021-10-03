@@ -6,9 +6,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
   line-height: 1.4;
+  color: #000;
 }
 
 .container {
@@ -21,6 +22,10 @@ img {
   max-width: 100%;
 }
 
+h2 {
+  color: #000;
+}
+
 .image-container {
   display: block;
   width: 40px;
@@ -30,7 +35,7 @@ img {
 }
 
 a {
-  color: inherit;
+  color: red;
   text-decoration: none;
 }
 
@@ -42,6 +47,7 @@ a {
   border: 1px solid #000;
   border-radius: 20px;
   padding: 0.6rem 1rem;
+  color: #000;
 }
 
 footer {

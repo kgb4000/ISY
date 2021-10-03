@@ -5,10 +5,9 @@ const About = () => {
   return (
     <>
       <HeroSection 
-				heroText="About us"
+				heroText="I See You Network"
 				backgroundImage="/dudes-on-bikes.jpeg"
-        subText="About I See You Network"
-				backgroundHeight="60vh"
+				backgroundHeight="30vh"
 			/>
       <div className="container">
         <h2>About</h2>

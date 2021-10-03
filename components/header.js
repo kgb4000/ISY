@@ -5,25 +5,21 @@ export default function Header() {
   return (
     <HeadR>
       <div className="container">
-        <div className="logo">
           <Link href="/">
-            <a>ISY</a>
+            <img src="logo.jpeg" className="logo"/>
           </Link>
-        </div>
-        <nav>
-          <ul className="nav">
-            <li>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <ul className="nav">
+          <li>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
+          </li>
+        </ul>
       </div>
     </HeadR>
   )
@@ -34,10 +30,15 @@ const HeadR = styled.header`
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      max-width: 6rem;
+      cursor: pointer;
+    }
   }
 
-  nav ul {
-    width: 100%;
+  ul.nav {
     display: flex;
     margin: 0;
 
@@ -45,13 +46,12 @@ const HeadR = styled.header`
       list-style-type: none;
       margin-left: 1rem;
     }
+
+    a {
+      color: inherit;
+    }
   }
 
-  height: 70px;
-  line-height: 70px;
+  padding: 1rem 0;
 
-  .logo {
-    font-size: 2rem;
-    font-weight: 700;
-  }
 `

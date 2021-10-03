@@ -37,7 +37,7 @@ export default function Home({ post }) {
             src={post.coverImage.url} 
             alt={post.title}
             />
-          <h2>{post.title}</h2>
+          <h2 className="post-title">{post.title}</h2>
           <div className="author">
             <div className='image-container'>
               <img 
@@ -64,6 +64,10 @@ export default function Home({ post }) {
 
 const Main = styled.main`
 
+h2.post-title {
+  color: inherit;
+}
+
   .author {
     display: flex;
     align-items: center;
@@ -71,6 +75,15 @@ const Main = styled.main`
     p {
       margin-left: 1rem;
     }
+
+  }
+
+  a {
+    color: red;
+  }
+
+   {
+    color: inherit;
   }
 
 `
